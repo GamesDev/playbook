@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+  <!-- {% if enforce_ssl %}{% include favicons.html %}{% endif %} -->
+
+  <!-- <link rel='canonical' href='{{ wiki.base_path }}{{ page.url }}'/> -->
+
+  <title>{{ page.title }}</title>
+
+  <meta charset='utf-8'/>
+  <meta http-equiv='Content-Language' content='en'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <meta name='keywords' content='Wiredcraft, playbook, knowledge, best practices, wiki, handbook, how to'/>
+  <meta name='description' content='A collection of '>
+
+  <!-- Open graph -->
+  <!-- <meta property='og:site_name' content='{{ site.title }}'/> -->
+  <meta property='og:type' content='website'/>
+  <!-- <meta property='og:title' content='{{ page.title }}'/>
+  <meta property='og:url' content='{{ site.url }}{{ page.url }}'/>
+  <meta property='og:description' content='{{ excerpt }}'/>
+  <meta property='og:image' content='{{ cover }}'/> -->
+
+  <!-- Twitter card -->
+  <meta name='twitter:card' content='summary_large_image'/>
+  <!-- <meta name='twitter:site' content='{{ site.twitter }}'/>
+  <meta name='twitter:creator' content='{{ site.twitter }}'/>
+  <meta name='twitter:title' content='{{ page.title }}'/>
+  <meta name='twitter:description' content='{{ excerpt }}'/>
+  <meta name='twitter:image' content='{{ cover }}'/> -->
+
+  <!-- Favicons -->
+  <link rel='apple-touch-icon' sizes='57x57' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-57x57.png'>
+  <link rel='apple-touch-icon' sizes='60x60' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-60x60.png'>
+  <link rel='apple-touch-icon' sizes='72x72' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-72x72.png'>
+  <link rel='apple-touch-icon' sizes='76x76' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-76x76.png'>
+  <link rel='apple-touch-icon' sizes='114x114' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-114x114.png'>
+  <link rel='apple-touch-icon' sizes='120x120' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-120x120.png'>
+  <link rel='apple-touch-icon' sizes='144x144' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-144x144.png'>
+  <link rel='apple-touch-icon' sizes='152x152' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-152x152.png'>
+  <link rel='apple-touch-icon' sizes='180x180' href='{{ wiki.base_path }}assets/favicons/apple-touch-icon-180x180.png'>
+  <link rel='icon' type='image/png' href='{{ wiki.base_path }}assets/favicons/favicon-32x32.png' sizes='32x32'>
+  <link rel='icon' type='image/png' href='{{ wiki.base_path }}assets/favicons/android-chrome-192x192.png' sizes='192x192'>
+  <link rel='icon' type='image/png' href='{{ wiki.base_path }}assets/favicons/favicon-96x96.png' sizes='96x96'>
+  <link rel='icon' type='image/png' href='{{ wiki.base_path }}assets/favicons/favicon-16x16.png' sizes='16x16'>
+  <link rel='manifest' href='{{ wiki.base_path }}assets/favicons/manifest.json'>
+  <meta name='msapplication-TileColor' content='#00aba9'>
+  <meta name='msapplication-TileImage' content='/mstile-144x144.png'>
+  <meta name='theme-color' content='#ffffff'>
+
+  <!-- CSS -->
+  <link rel='stylesheet' href='{{ wiki.base_path }}assets/styles.css'>
+
+  <!-- RSS -->
+  <!-- <link rel='alternate' type='application/rss+xml' title='{{ site.title }}' href='{{ site.baseurl }}/atom.xml' /> -->
+</head>
+
+<body>
+  <nav id='navigation'>
+    <header class='header'>
+      <!-- <div class='bundle'>
+        <button class='button primary'>PDF</button><button class='button primary'>ePub</button><button class='button primary'>Mobi</button>
+      </div> -->
+      <h2>The Wiredcraft Playbook</h2>
+      <div class='search'>
+        <button class='submit'><span>Search</span></button>
+        <input type='text' placeholder='Search...'/>
+      </div>
+    </header>
+    <section class='body'>
+      {{ page.sidebar }}
+    </section>
+  </nav>
+
+  <article id='content'>
+    <button class='toggle'><span>Show/Hide</span></button>
+    <section class='body'>
+      <h1>{{ page.title }}</h1>
+      {{ page.content }}
+      <p class='footer'>Last edited by {{ page.author }} on {{ page.date }}</p>
+    </section>
+  </article>
+
+  <div id='overlay'>
+    <div id='modal'>
+      <header class='header'>
+        <a class='close'><span>Close</span></a>
+        <h2>Subscribe to our newsletter</h2>
+      </header>
+      <section class='body'>
+        <a class='close icon'>&#xe800;</a>
+      </section>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src='{{ wiki.base_path }}assets/scripts.js' type='text/javascript'></script>
+  <!--[if lt IE 9]><script src='https://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+  <!-- {% if site.gauges %}{% include gauges.html %}{% endif %}
+  {% if site.google_analytics %}{% include google_analytics.html %}{% endif %} -->
+</body>
+</html>

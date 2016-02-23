@@ -31,7 +31,7 @@ var assets = {
 gulp.task('js', function() {
     gulp.src(assets.js)
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('gollum/assets'));
+        .pipe(gulp.dest('assets'));
 });
 
 gulp.task('css', function() {
@@ -39,7 +39,7 @@ gulp.task('css', function() {
         .pipe(sass({ includePaths: require('node-bourbon').includePaths }))
         .pipe(concat('styles.css'))
         .pipe(minify({keepBreaks:true}))
-        .pipe(gulp.dest('gollum/assets'));
+        .pipe(gulp.dest('assets'));
 });
 
 gulp.task('default', ['css', 'js']);

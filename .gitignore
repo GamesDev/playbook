@@ -1,14 +1,9 @@
 .*
 !.gitignore
 !.gitmodules
+!.gollumignore
 *~
 
 _site/
 node_modules/
 bower_components/
-
-gollum/
-!.gollumignore
-!gollum/assets/
-!gollum/_Layout.html/
-!gollum/_Sidebar.html/

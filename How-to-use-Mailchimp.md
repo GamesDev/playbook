@@ -1,0 +1,11 @@
+- List + Groups (KISS),
+- Link GA
+- Auto tweet
+- RSS to email
+- Manage your engagement/inactive users
+- Retrieve timezones silently
+- If possible more info? Name at least, maybe specifics later on.
+- Track links (settings)
+- Clean template
+- Integrate w/ Eventbrite for RSVP if needed (need to see w/ Weibo process)
+- Can we integrate with HN?
