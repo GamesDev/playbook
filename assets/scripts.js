@@ -24286,6 +24286,22 @@ hljs.registerLanguage('zephir', function(hljs) {
   return hljs;
 }));
 
+$(function() {
+  var url = window.location.pathname.replace(/\/$/, '');
+  $('#navigation a').each(function(){
+    var href= $(this).attr('href');
+    if (href != '/') {
+      var match = new RegExp("^"+ href.replace(/\/$/, ''), 'i');
+      if (match.test(url)) {
+        $(this).addClass('active');
+      }
+    }
+    else {
+      if (url == '') $(this).addClass('active');
+    }
+  });
+});
+
 hljs.initHighlightingOnLoad();
 
 $(function() {
@@ -24305,8 +24321,6 @@ $(function() {
 });
 
 $(function() {
-  $('#navigation .body > ul:first-child > li:first-child a').addClass('active');
-
   $('#content .toggle').click(function () {
     if ($('body').hasClass('collapsed')) {
       $('body').removeClass('collapsed');
