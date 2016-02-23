@@ -1,0 +1,53 @@
+#content {
+  box-sizing: border-box;
+  margin-left: 25%;
+  padding: 2*$gutter;
+  position: relative;
+  text-align: center;
+  .toggle {
+    background: $light;
+    border: 1px solid $line;
+    border-left: 0;
+    border-radius: 0 $radius $radius 0;
+    color: $grey;
+    @include font-size($large);
+    left: 25%;
+    line-height: 1;
+    outline: none;
+    padding: $gutter/2 0;
+    position: fixed;
+    margin-left: -1px;
+    top: $gutter;
+    span {
+      display: none;
+    }
+    &:before {
+      @include twig(24);
+      content: '\e82e';
+    }
+    &:hover {
+      color: inherit;
+    }
+  }
+  .body {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: left;
+    h1 {
+      border-bottom: 1px solid $light;
+      padding-bottom: $gutter;
+    }
+    img {
+      max-width: 100%;
+    }
+    table {
+      width: 100%;
+    }
+    .footer {
+      border-top: 1px solid $light;
+      color: $grey;
+      @include font-size($smaller);
+      padding-top: $gutter;
+    }
+  }
+}

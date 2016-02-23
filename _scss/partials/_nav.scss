@@ -1,0 +1,121 @@
+$sidebar: 25%;
+
+#navigation {
+  background: $light;
+  border-right: 1px solid $line;
+  bottom: 0;
+  box-sizing: border-box;
+  @include font-size($smaller);
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: $gutter;
+  position: fixed;
+  top: 0;
+  width: $sidebar;
+  .header {
+    border-bottom: 1px solid $line;
+    margin-bottom: $gutter/2;
+    padding-bottom: $gutter;
+  }
+  .search {
+    position: relative;
+    .submit {
+      background: none;
+      border: 0;
+      color: $grey;
+      outline: none;
+      padding: $gutter/4 1.5*$gutter/2 $gutter/4 0;
+      position: absolute;
+      right: 0;
+      @include transition-property(color);
+      @include transition-duration($ease);
+      span {
+        display: none;
+      }
+      &:before {
+        @include twig();
+        content: '\e834';
+        font-weight: bold;
+      }
+      &:hover {
+        color: inherit;
+      }
+    }
+    input {
+      border-radius: $gutter;
+      box-sizing: border-box;
+      padding-right: 1.5*$gutter;
+      width: 100%;
+    }
+  }
+  h2 {
+    @include font-size($large);
+    text-align: center;
+  }
+  h3 {
+    border-top: 1px solid $line;
+    @include font-size();
+    margin-bottom: $gutter/2;
+    margin-top: $gutter/2;
+    padding-top: $gutter;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    ul {
+      margin-left: $gutter;
+    }
+    strong {
+      font-weight: inherit;
+      text-transform: uppercase;
+    }
+    a {
+      color: inherit;
+      display: block;
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+  &:hover {
+    ul {
+      a {
+        color: $blue;
+        &:hover {
+          color: shade($blue, 10%);
+        }
+      }
+    }
+  }
+}
+
+
+
+/* Sliding */
+
+#navigation,
+#content {
+  @include transition-property(margin-left);
+  @include transition-duration($ease);
+}
+
+#content .toggle {
+  @include transition-property(left, color);
+  @include transition-duration($ease);
+}
+
+body.collapsed {
+  #navigation {
+    margin-left: -$sidebar;
+  }
+  #content {
+    margin-left: 0;
+    .toggle {
+      left: 0;
+      &:before {
+        content: '\e826';
+      }
+    }
+  }
+}

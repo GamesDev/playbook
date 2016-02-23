@@ -1,0 +1,94 @@
+html {
+  @include breakpoint(mobile) {
+    font-size: 57%;
+  }
+  @include breakpoint(tablet) {
+    font-size: 59%;
+  }
+  @include breakpoint(desktop) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  color: tint($black, 10%);
+  font-family: $body;
+  font-weight: normal;
+  line-height: 160%;
+  position: relative;
+}
+
+a {
+  cursor: pointer;
+  color: $blue;
+  text-decoration: none;
+  @include transition-property(color);
+  @include transition-duration($ease);
+  &:hover {
+    color: shade($blue, 10%);
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  font-family: $headline;
+  font-weight: bold;
+  line-height: 120%;
+  margin: 0 0 $gutter;
+}
+
+h1 {
+  @include font-size($gigantic);
+}
+
+h2 {
+  @include font-size($huge);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @include font-size($large);
+}
+
+p,
+pre {
+  margin: 0 0 $gutter;
+}
+
+ul,
+ol {
+  margin: 0 0 $gutter/2 $gutter;
+  padding: 0;
+  li {
+    padding: 0 0 $gutter/2;
+  }
+  ul,
+  ol {
+    margin-bottom: 0;
+    li {
+      padding: $gutter/2 0 0;
+    }
+  }
+}
+
+small {
+  @include font-size($small);
+}
+
+blockquote {
+  border-left: $gutter/4 solid $light;
+  color: tint($black, 40%);
+  margin: 0 $gutter $gutter;
+  padding-left: $gutter;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

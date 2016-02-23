@@ -1,0 +1,13 @@
+#header {
+  background: $background;
+  border-bottom: 1px solid $line;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  padding: $gutter/2 $gutter;;
+  position: fixed;
+  width: 100%;
+  .controls {
+    float: right;
+    // margin: -10px 0;
+  }
+}
