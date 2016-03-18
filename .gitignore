@@ -2,8 +2,8 @@
 !.gitignore
 !.gitmodules
 !.gollumignore
+_*
 *~
 
-_site/
 node_modules/
 bower_components/
