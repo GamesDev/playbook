@@ -1,6 +1,0 @@
-If you have an idea of product, just shoot. It doesn't need to be fully thought through but a short description of what it does would be nice.
-
-* **Hubot as a Service**: simple, easy to tweak bot. Pay a subscription fee, explore community plugins, add your own Bitbucket/Github repo of custom scripts. Run in micro containers.
-* **GMail online backup on S3**: lots of people freaking out about their email and the fact that somehow sometimes Google goes crazy and blocks you out of your account. We could back it up on S3. Could be an interesting tool to easily recover large inboxes on actual machines as well for those who use local clients (@zbal has experience with that).
-* **IFTTT of email**: there's a lot of discussion around how to improve email, make it better/more efficient. What if were building that awesome facility that route emails to various containers. We put defaults but people can tweak it over time. Some stuff creates a trello ticket, some a github ticket, some a wiki, some an IM...
-* **VPN that works**: a VPN with a series of remote endpoints (IP + port changes over time on EC2) and a small device (Raspbery PI?) that you plug in your LAN and use as a local proxy. Look into Meraki and CryptoSeal. Medium sized companies, in China for now.

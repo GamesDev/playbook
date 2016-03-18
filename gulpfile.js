@@ -1,16 +1,8 @@
-var path = require('path');
-var http = require('http');
-
 var gulp = require('gulp');
-var clean = require('gulp-clean');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var gutil = require('gulp-util');
 var minify = require('gulp-minify-css');
-var merge = require('merge-stream');
-var log = gutil.log;
-var colors = gutil.colors;
 
 var assets = {
     'js': [
