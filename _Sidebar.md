@@ -1,4 +1,4 @@
-[⌂ What is this?](./Home)
+[[Home]]
 
 ### Company
 
